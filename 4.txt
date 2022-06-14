@@ -107,4 +107,4 @@ USE shop;
 
 4) SELECT * FROM users 
 WHERE birthday_at < CURDATE() - INTERVAL 30 YEAR 
-  AND id in (SELECT user_id FROM orders GROUP BY user_id HAVING COUNT(*) > 1);
+  AND id in (SELECT user_id FROM orders GROUP BY user_id HAVING COUNT(*) > 2);
