@@ -1,0 +1,52 @@
+html {
+height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    align-items: center;    
+}
+
+h1 {
+    margin-bottom: 100px;
+}
+
+.table {
+    display: none;
+}
+
+.table.show {
+    display: block;
+}
+
+.table-head {
+    border-bottom: 1px solid lightgray;
+}
+
+.table-head div {
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.table-body {
+    display: flex;
+}
+
+.table-body div {
+    text-align: center;
+}
+
+.table-body div:nth-child(even) {
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.modal-body {
+    text-align: center;
+}

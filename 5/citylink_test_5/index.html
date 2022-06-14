@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Тестовое задание</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="offset-xl-4 offset-sm-1 col-sm-10 col-xl-4">
+                <h1>"Олимпиада"</h1>
+
+                <div class="input-container">
+                    <label class="form-label">Участники</label>
+                    <div class="input-group mb-3">
+                        <input id="participants-input" type="text" class="form-control" name="participants" placeholder="введите имена участников через запятую">
+                    </div>
+
+                    <button class="btn btn-primary" onclick="addParticipant()" type="submit">Добавить</button>
+                </div>
+
+                <div id="table" class="table">
+                    <div class="table-head d-flex">
+                            <div class="col-3" onclick="sort()">id</div>
+                            <div class="col-6" onclick="sort('name')">Имя</div>
+                            <div class="col-3" onclick="sort('score')">Очки</div>
+                    </div>
+
+                    <div id="participant-list">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+    class="modal fade"
+    id="modal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title" id="exampleModalLabel">Ошибка</h5>
+          </button>
+        </div>
+        <div id="modal-error" class="modal-body d-flex justify-content-center">
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button onclick="closeModal()" type="button" class="btn btn-secondary" data-dismiss="modal">
+            Закрыть
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
